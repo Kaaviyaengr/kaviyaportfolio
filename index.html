@@ -46,6 +46,41 @@
       }
     }
 
+    /* Navigation Bar */
+    nav {
+      background-color: #333;
+      position: sticky;
+      top: 0;
+      width: 100%;
+      z-index: 100;
+    }
+
+    nav ul {
+      display: flex;
+      justify-content: center;
+      list-style-type: none;
+      padding: 15px 0;
+    }
+
+    nav ul li {
+      margin: 0 15px;
+    }
+
+    nav ul li a {
+      color: #fff;
+      font-size: 1.2rem;
+      text-decoration: none;
+      padding: 10px 20px;
+      text-transform: uppercase;
+      transition: background-color 0.3s ease;
+    }
+
+    nav ul li a:hover, nav ul li a.active {
+      background-color: #3498db;
+      color: #fff;
+    }
+
+    /* Content Sections */
     section {
       padding: 20px;
       margin: 20px;
@@ -140,6 +175,15 @@
     <h1>Welcome to Kaviya's Portfolio!</h1>
   </header>
 
+  <!-- Navigation Bar -->
+  <nav>
+    <ul>
+      <li><a href="#about" class="nav-link">About Me</a></li>
+      <li><a href="#resume" class="nav-link">My Resume</a></li>
+      <li><a href="#contact" class="nav-link">Contact Me</a></li>
+    </ul>
+  </nav>
+
   <section id="about">
     <h2>About Me</h2>
     <p>I'm Kaviya, a cybersecurity student passionate about ethical hacking, penetration testing, and digital transformation. Welcome to my personal space where I showcase my journey and work!</p>
@@ -163,6 +207,29 @@
   <footer>
     <p>&copy; 2024 Kaviya | All Rights Reserved</p>
   </footer>
+
+  <script>
+    // Highlight active link in navigation bar
+    const links = document.querySelectorAll('.nav-link');
+    
+    window.addEventListener('scroll', () => {
+      let currentSection = "";
+      document.querySelectorAll('section').forEach(section => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.clientHeight;
+        if (window.scrollY >= sectionTop - sectionHeight / 3) {
+          currentSection = section.getAttribute("id");
+        }
+      });
+
+      links.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href').includes(currentSection)) {
+          link.classList.add('active');
+        }
+      });
+    });
+  </script>
 
 </body>
 </html>
