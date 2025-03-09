@@ -3,32 +3,166 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Your Name's Portfolio</title>
-  <link rel="stylesheet" href="styles.css">
+  <title>Kaviya's Portfolio</title>
+  <style>
+    /* Basic Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #282c34;
+      color: #fff;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    header {
+      background-color: #4CAF50;
+      color: white;
+      text-align: center;
+      padding: 30px;
+      font-size: 2rem;
+      text-transform: uppercase;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    h1 {
+      animation: moveText 3s ease-in-out infinite alternate;
+    }
+
+    @keyframes moveText {
+      0% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-20px);
+      }
+      100% {
+        transform: translateY(0);
+      }
+    }
+
+    section {
+      padding: 20px;
+      margin: 20px;
+      border-radius: 8px;
+      background-color: rgba(255, 255, 255, 0.1);
+    }
+
+    h2 {
+      font-size: 2rem;
+      color: #f1c40f;
+      text-transform: uppercase;
+      text-align: center;
+      margin-bottom: 10px;
+      animation: slideIn 2s ease-out;
+    }
+
+    @keyframes slideIn {
+      0% {
+        transform: translateX(-100%);
+      }
+      100% {
+        transform: translateX(0);
+      }
+    }
+
+    p {
+      font-size: 1.2rem;
+      text-align: center;
+    }
+
+    a {
+      color: #3498db;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    a:hover {
+      color: #f39c12;
+    }
+
+    footer {
+      text-align: center;
+      padding: 10px;
+      background-color: #333;
+      color: #aaa;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+
+    .cta-btn {
+      background-color: #3498db;
+      color: #fff;
+      padding: 10px 20px;
+      font-size: 1.2rem;
+      border-radius: 5px;
+      text-transform: uppercase;
+      display: inline-block;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+
+    .cta-btn:hover {
+      background-color: #2980b9;
+    }
+
+    .animated-text {
+      color: #e74c3c;
+      font-size: 1.5rem;
+      font-weight: bold;
+      text-align: center;
+      margin: 30px 0;
+      animation: blinkText 1s infinite step-start;
+    }
+
+    @keyframes blinkText {
+      50% {
+        color: transparent;
+      }
+    }
+
+    /* Add smooth scroll effect */
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
 </head>
 <body>
+
   <header>
-    <h1>Welcome to Kaviya's Website!</h1>
+    <h1>Welcome to Kaviya's Portfolio!</h1>
   </header>
 
   <section id="about">
     <h2>About Me</h2>
-    <p>I'm Kaviya, a cybersecurity student passionate about ethical hacking, penetration testing, and digital transformation.</p>
+    <p>I'm Kaviya, a cybersecurity student passionate about ethical hacking, penetration testing, and digital transformation. Welcome to my personal space where I showcase my journey and work!</p>
   </section>
 
   <section id="resume">
     <h2>My Resume</h2>
-    <p><a href="path/to/your-resume.pdf" target="_blank">Click here to view my resume</a></p>
+    <p><a href="path/to/your-resume.pdf" target="_blank" class="cta-btn">Click here to view my resume</a></p>
   </section>
 
   <section id="contact">
     <h2>Contact Me</h2>
-    <p>Email: your-email@example.com</p>
+    <p>Email: <a href="mailto:your-email@example.com">your-email@example.com</a></p>
     <p>LinkedIn: <a href="https://linkedin.com/in/your-profile" target="_blank">LinkedIn Profile</a></p>
   </section>
-  
+
+  <section class="animated-text">
+    <p>Currently working on several cybersecurity projects and looking for new opportunities!</p>
+  </section>
+
   <footer>
-    <p>Created by Kaviya</p>
+    <p>&copy; 2024 Kaviya | All Rights Reserved</p>
   </footer>
+
 </body>
 </html>
