@@ -1,235 +1,142 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kaviya's Portfolio</title>
-  <style>
-    /* Basic Reset */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: 'Arial', sans-serif;
-      background-color: #282c34;
-      color: #fff;
-      line-height: 1.6;
-      overflow-x: hidden;
-    }
-
-    header {
-      background-color: #4CAF50;
-      color: white;
-      text-align: center;
-      padding: 30px;
-      font-size: 2rem;
-      text-transform: uppercase;
-      animation: fadeIn 2s ease-in-out;
-    }
-
-    h1 {
-      animation: moveText 3s ease-in-out infinite alternate;
-    }
-
-    @keyframes moveText {
-      0% {
-        transform: translateY(0);
-      }
-      50% {
-        transform: translateY(-20px);
-      }
-      100% {
-        transform: translateY(0);
-      }
-    }
-
-    /* Navigation Bar */
-    nav {
-      background-color: #333;
-      position: sticky;
-      top: 0;
-      width: 100%;
-      z-index: 100;
-    }
-
-    nav ul {
-      display: flex;
-      justify-content: center;
-      list-style-type: none;
-      padding: 15px 0;
-    }
-
-    nav ul li {
-      margin: 0 15px;
-    }
-
-    nav ul li a {
-      color: #fff;
-      font-size: 1.2rem;
-      text-decoration: none;
-      padding: 10px 20px;
-      text-transform: uppercase;
-      transition: background-color 0.3s ease;
-    }
-
-    nav ul li a:hover, nav ul li a.active {
-      background-color: #3498db;
-      color: #fff;
-    }
-
-    /* Content Sections */
-    section {
-      padding: 20px;
-      margin: 20px;
-      border-radius: 8px;
-      background-color: rgba(255, 255, 255, 0.1);
-    }
-
-    h2 {
-      font-size: 2rem;
-      color: #f1c40f;
-      text-transform: uppercase;
-      text-align: center;
-      margin-bottom: 10px;
-      animation: slideIn 2s ease-out;
-    }
-
-    @keyframes slideIn {
-      0% {
-        transform: translateX(-100%);
-      }
-      100% {
-        transform: translateX(0);
-      }
-    }
-
-    p {
-      font-size: 1.2rem;
-      text-align: center;
-    }
-
-    a {
-      color: #3498db;
-      text-decoration: none;
-      font-weight: bold;
-      transition: color 0.3s;
-    }
-
-    a:hover {
-      color: #f39c12;
-    }
-
-    footer {
-      text-align: center;
-      padding: 10px;
-      background-color: #333;
-      color: #aaa;
-      position: fixed;
-      bottom: 0;
-      width: 100%;
-    }
-
-    .cta-btn {
-      background-color: #3498db;
-      color: #fff;
-      padding: 10px 20px;
-      font-size: 1.2rem;
-      border-radius: 5px;
-      text-transform: uppercase;
-      display: inline-block;
-      text-decoration: none;
-      transition: background-color 0.3s ease;
-    }
-
-    .cta-btn:hover {
-      background-color: #2980b9;
-    }
-
-    .animated-text {
-      color: #e74c3c;
-      font-size: 1.5rem;
-      font-weight: bold;
-      text-align: center;
-      margin: 30px 0;
-      animation: blinkText 1s infinite step-start;
-    }
-
-    @keyframes blinkText {
-      50% {
-        color: transparent;
-      }
-    }
-
-    /* Add smooth scroll effect */
-    html {
-      scroll-behavior: smooth;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kaviya Palanisamy | Cybersecurity Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background-color: #0e0e0e;
+            color: #f2f2f2;
+        }
+        header {
+            background-color: #1f1f1f;
+            padding: 30px;
+            text-align: center;
+        }
+        header h1 {
+            margin: 10px 0;
+        }
+        header p {
+            color: #a0a0a0;
+        }
+        nav {
+            text-align: center;
+            margin-top: 10px;
+        }
+        nav a {
+            margin: 0 15px;
+            color: #00bfff;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        section {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: #1a1a1a;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.6);
+        }
+        section h2 {
+            color: #00bfff;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        .contact {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        footer {
+            background-color: #1f1f1f;
+            text-align: center;
+            padding: 20px;
+            color: #777;
+        }
+        a {
+            color: #00bfff;
+        }
+    </style>
 </head>
 <body>
 
-  <header>
-    <h1>Welcome to Kaviya's Portfolio!</h1>
-  </header>
+<header>
+    <h1>Kaviya Palanisamy</h1>
+    <p>Cybersecurity Analyst | Cybersecurity Graduate | SOC | GRC | Penetration Testing</p>
+    <nav>
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#certifications">Certifications</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
 
-  <!-- Navigation Bar -->
-  <nav>
-    <ul>
-      <li><a href="#about" class="nav-link">About Me</a></li>
-      <li><a href="#resume" class="nav-link">My Resume</a></li>
-      <li><a href="#contact" class="nav-link">Contact Me</a></li>
-    </ul>
-  </nav>
-
-  <section id="about">
+<section id="about">
     <h2>About Me</h2>
-    <p>I'm Kaviya, a cybersecurity student passionate about ethical hacking, penetration testing, and digital transformation. Welcome to my personal space where I showcase my journey and work!</p>
-  </section>
+    <p>
+        Master of Cybersecurity (High Distinction, RMIT) graduate with 6 months of SOC experience 
+        and 3 years as a software engineer. Skilled in security operations, incident response, threat detection, 
+        penetration testing, and compliance frameworks. ISC2 Certified in Cybersecurity (CC) and pursuing CompTIA Security+. 
+        Passionate about strengthening cybersecurity posture for organizations.
+    </p>
+</section>
 
-  <section id="resume">
-    <h2>My Resume</h2>
-    <p><a href="path/to/your-resume.pdf" target="_blank" class="cta-btn">Click here to view my resume</a></p>
-  </section>
+<section id="experience">
+    <h2>Experience</h2>
+    <ul>
+        <li><strong>Cyber Security Analyst Intern</strong> – Intrix Cybersecurity (Feb 2025 – May 2025)<br>
+            - Worked with ELK stack, Splunk dashboards, and Python for automation.
+        </li>
+        <li><strong>Cyber Security Analyst Intern</strong> – Borderless CS (July 2024 – Oct 2024)<br>
+            - Developed SIEM rules, did penetration testing, and supported ISO 27001 compliance.
+        </li>
+        <li><strong>Engineer – Technology</strong> – Virtusa (June 2019 – June 2022)<br>
+            - Built enterprise apps in Java/Angular; received Spot & Pioneer awards for excellence.
+        </li>
+    </ul>
+</section>
 
-  <section id="contact">
-    <h2>Contact Me</h2>
-    <p>Email: <a href="mailto:your-email@example.com">your-email@example.com</a></p>
-    <p>LinkedIn: <a href="https://linkedin.com/in/your-profile" target="_blank">LinkedIn Profile</a></p>
-  </section>
+<section id="projects">
+    <h2>Projects</h2>
+    <ul>
+        <li><strong>Data Analytics Hub & Social Media Analyzer</strong> – Java-based platform [GitHub]</li>
+        <li><strong>Penetration Testing Labs</strong> – Identified SQLi, XSS, broken auth vulnerabilities.</li>
+        <li><strong>Ticket Booking System & File Analyzer</strong> – Python-based tools [GitHub]</li>
+        <li><strong>Biometric Bias Study</strong> – Analyzed demographic bias in biometric systems.</li>
+        <li><strong>Risk Analyst (Simulation)</strong> – Performed risk assessments using NIST framework.</li>
+    </ul>
+</section>
 
-  <section class="animated-text">
-    <p>Currently working on several cybersecurity projects and looking for new opportunities!</p>
-  </section>
+<section id="certifications">
+    <h2>Certifications</h2>
+    <ul>
+        <li>ISC2 Certified in Cybersecurity (CC)</li>
+        <li>Oracle Java SE 8 Programmer</li>
+        <li>CompTIA Security+ (In Progress)</li>
+    </ul>
+</section>
 
-  <footer>
-    <p>&copy; 2024 Kaviya | All Rights Reserved</p>
-  </footer>
+<section id="contact" class="contact">
+    <h2>Contact</h2>
+    <p>📧 <a href="mailto:kaaviyapalanisamy25@gmail.com">kaaviyapalanisamy25@gmail.com</a></p>
+    <p>📞 +61 466 672 569</p>
+    <p>🌏 Australia</p>
+    <p>
+        <a href="#">LinkedIn</a> | 
+        <a href="#">GitHub</a> | 
+        <a href="#">TryHackMe</a> | 
+        <a href="#">Hack The Box</a>
+    </p>
+</section>
 
-  <script>
-    // Highlight active link in navigation bar
-    const links = document.querySelectorAll('.nav-link');
-    
-    window.addEventListener('scroll', () => {
-      let currentSection = "";
-      document.querySelectorAll('section').forEach(section => {
-        const sectionTop = section.offsetTop;
-        const sectionHeight = section.clientHeight;
-        if (window.scrollY >= sectionTop - sectionHeight / 3) {
-          currentSection = section.getAttribute("id");
-        }
-      });
-
-      links.forEach(link => {
-        link.classList.remove('active');
-        if (link.getAttribute('href').includes(currentSection)) {
-          link.classList.add('active');
-        }
-      });
-    });
-  </script>
+<footer>
+    &copy; 2025 Kaviya Palanisamy. All rights reserved.
+</footer>
 
 </body>
 </html>
